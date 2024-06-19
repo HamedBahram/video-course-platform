@@ -8,26 +8,24 @@ export default function Header() {
   return (
     <header className='py-4'>
       <nav className='container flex items-center justify-between'>
-        <ul className='flex gap-10 text-sm font-medium'>
-          <li>
-            <Link href='/'>Home</Link>
+        <ul className='flex items-center gap-10 text-sm font-medium'>
+          <li className='font-serif text-lg font-semibold'>
+            <Link href='/'>Learnn.dev</Link>
           </li>
           <li>
-            <Link href='/protected/server'>Protected (server)</Link>
-          </li>
-          <li>
-            <Link href='/protected/client'>Protected (client)</Link>
-          </li>
-          <li>
-            <Link href='/api/me'>Who am I?</Link>
+            <Link href='/courses'>Courses</Link>
           </li>
         </ul>
 
         <div className='flex items-center justify-between gap-6'>
           <ThemeToggle />
 
+          <Button size='sm' variant='ghost' asChild>
+            <Link href='/teach'>Teach</Link>
+          </Button>
+
           <SignedOut>
-            <SignInButton mode='modal'>
+            <SignInButton>
               <Button size='sm'>Sign in</Button>
             </SignInButton>
           </SignedOut>
